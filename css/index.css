@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  
+  }
+  
+
+  .slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to left, grey,Gainsboro);
+    z-index: -1;
+  }
+  
+  
+  nav .navbar{
+    background-color: black;
+    padding: 0;
+  }
+  .navbar-brand{
+    margin-left: 20px;
+    width: 100px;
+  }
+  .nav-link{
+    margin: 0 10px 0 0;
+  }
+  
+  .navbar-nav button a,
+  .navbar-nav button,
+  .navbar-nav h3{
+    color: white;
+  }
+  #logo{
+    grid-column: 2/3;
+  }
+  .hamburger {
+    justify-self: end;
+  }
+  
+  
+  
+  section{
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero {
+    height: 60%;
+    width: 100%;
+    position: relative;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .headline {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    font-size: 100px;
+    transform: translate(-20%, -70%);
+    color: white;
+    z-index: 3;
+  }
+  
+  .hero::after {
+    content: "";
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0.3;
+    top: 0;
+  }
+
+
+  .bg {
+    background: url("https://images7.alphacoders.com/112/thumb-1920-1124254.png") 
+      repeat fixed 100% ;
+      margin-top: 65px;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      text-align: center;
+  }  
+
+  .bg h1{
+    color: whitesmoke;
+  }
+  .bg p {
+    text-align: left;
+  }
+
+  .bg h2 {
+    padding-bottom: 20px;
+  }
+
+  .bg .card{    
+    cursor: pointer;
+    background-color: rgba(200,200,200,.5);
+  }
+  .bg .card:hover{
+   transition: all 0.5s;
+   background-color: black;
+  }
+
+  .bg p:hover{
+    color: white;
+  }
+
+  .lesson-wrapper {
+    height: 420px;
+    padding-bottom: 80px;
+    text-align: center;
+  }
+  
+  .lesson {
+    float: left;
+    width: 290px;
+    position: relative;
+  }
+  
+  .lesson-icon img{
+    width: 150px;
+    height: 170px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    position: relative;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: rgba(200,200,200,.5);
+    opacity: 0.5;
+  }
+  .lesson-icon img:hover{
+   width: 170px;
+   height: 190px;
+   border: 2px solid black;
+   transition: all 0.5s;
+   opacity: 1;
+  }
+  .lesson-icon span{
+    font-family: "stencil";
+    float: 100px;
+    color: white;
+  }
+  
+  .lesson-icon p {
+    position: absolute;
+    top: 90px;
+    width: 200px;
+    height: 200px;
+    color: white;
+  }
+
+
+  .foto{
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .foto h2{
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: -80px;
+  }
+  .box{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+    margin: 0 auto;
+  }
+  .cardd{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+  }
+  .cardd:before,
+  .cardd:after
+  {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #fff;
+    transition: 0.5s;
+    z-index:-1;
+  }
+  .cardd:hover:before{
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .cardd:hover:after{
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .cardd .imgBx{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+  }
+  
+  .cardd:hover .imgBx
+  {
+    bottom: 100px;
+  }
+
+  .cardd .imgBx img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .cardd .details{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: 80px;
+      text-align: center;
+  }
+
+  .cardd .details h2{
+   margin: 0;
+   padding: 0;
+   font-weight: 600;
+   font-size: 20px;
+   color: #777;
+   text-transform: uppercase;
+  } 
+
+  .cardd .details h2 span{
+  font-weight: 500;
+  font-size: 16px;
+  color: #f38695;
+  display: block;
+  margin-top: 5px;
+   } 
+   .medsos{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -15px;
+    margin-right: 40px;
+  }
+   .medsos li{
+    margin: 0 10px;
+  } 
+  .medsos a{
+    text-decoration: none;
+    color: #777;
+  }
+  .medsos a i{
+    transition: color .4s ease;
+  }
+  .medsos a:hover i{
+    color: #f38695;
+  }
+ 
+
+
+  footer{
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 48px;
+    color: #fff;
+  }
+  .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1rem;
+  }
+  .footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+  }
+  .socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+  }
+  .socials li{
+    margin: 0 10px;
+  }
+  .socials a{
+    text-decoration: none;
+    color: white;
+  }
+  .socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+  }
+  .socials a:hover i{
+    color: aqua;
+  }
+  .footer-bottom{
+    background: black;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+  }
+  .footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+  }
